@@ -1,0 +1,163 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <AbsoluteLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#263238"
+            android:padding="10px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="100">
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="80"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/juso"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="90"
+                            android:background="@drawable/round_shape"
+                            android:hint="검색어 또는 URL 입력"
+                            android:imeOptions="actionGo|flagNoExtractUi"
+                            android:inputType="textNoSuggestions"
+                            android:padding="10dp"
+                            android:singleLine="true"
+                            android:textColor="#000000"
+                            android:textColorHint="#90000000" />
+
+                        <Button
+                            android:id="@+id/edittext_remove"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="end"
+                            android:layout_marginLeft="2dp"
+                            android:layout_weight="10"
+                            android:text="X" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/go"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:padding="5px"
+                    android:src="@drawable/music_play" />
+
+                <ImageView
+                    android:id="@+id/menu"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:padding="5px"
+                    android:src="@drawable/music_play" />
+
+            </LinearLayout>
+        </AbsoluteLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_weight="90"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/browsing_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#3c3c3c"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#3c3c3c">
+
+                <WebView
+                    android:id="@+id/web_hash"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="10"
+            android:background="#3c3c3c"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:padding="5px" />
+
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:padding="3px" />
+
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:padding="3px" />
+
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:padding="3px" />
+
+            <Button
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="20"
+                android:padding="3px" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/tab_popup_caller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TAB"
+        android:textSize="50dp"
+        android:layout_gravity="bottom|right"/>
+</FrameLayout>
+

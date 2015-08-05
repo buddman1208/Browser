@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item android:title="새 탭" />
+    <item android:title="북마크" />
+    <item android:title="방문 기록"
+        android:id="@+id/action_history"/>
+    <item android:title="인쇄..." />
+    <item android:title="홈 화면에 추가" />
+    <item
+        android:checkable="true"
+        android:title="데스크톱 버전" />
+
+    <item android:title="VPN" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="설정" />
+</menu>
